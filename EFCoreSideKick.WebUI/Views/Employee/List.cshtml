@@ -1,0 +1,30 @@
+﻿@model List<ResultEmployeeDTO>
+
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Maaş</th>
+            <th>Departman</th>
+            <th>Durum</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Surname</td>
+                <td>@item.Salary</td>
+                <td>@item.Department</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </table>
+    <a href="btn btn-success">Yeni Personel</a>
+</div>
